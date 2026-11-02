@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Quiz System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <div id="loginPage" class="page">
+
+        <div class="login-card">
+
+            <h1>Online Quiz System</h1>
+
+            <p class="subtitle">
+                Test your Computer Science knowledge
+            </p>
+
+            <form id="loginForm">
+
+                <label for="studentName">
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter your name"
+                    autocomplete="off"
+                >
+
+                <p id="nameError" class="error-message"></p>
+
+                <button type="submit">
+                    Start Quiz
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= QUIZ PAGE ================= -->
+
+    <div id="quizPage" class="page hidden">
+
+        <div class="quiz-card">
+
+            <div class="quiz-header">
+
+                <h2>Online Quiz</h2>
+
+                <p id="questionNumber">
+                    Question 1 of 10
+                </p>
+
+            </div>
+
+
+            <!-- Progress Bar -->
+
+            <div class="progress-container">
+
+                <div
+                    id="progressBar"
+                    class="progress-bar">
+                </div>
+
+            </div>
+
+
+            <!-- Question -->
+
+            <h3 id="questionText">
+                Question will appear here
+            </h3>
+
+
+            <!-- Options -->
+
+            <div id="optionsContainer" class="options-container">
+            </div>
+
+
+            <!-- Error -->
+
+            <p id="answerError" class="error-message"></p>
+
+
+            <!-- Navigation -->
+
+            <div class="navigation-buttons">
+
+                <button
+                    id="previousBtn"
+                    type="button">
+                    Previous
+                </button>
+
+                <button
+                    id="nextBtn"
+                    type="button">
+                    Next
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= RESULT PAGE ================= -->
+
+    <div id="resultPage" class="page hidden">
+
+        <div class="result-card">
+
+            <h1>Quiz Completed!</h1>
+
+            <p id="resultStudentName"></p>
+
+
+            <div class="score-summary">
+
+                <div>
+                    <h3 id="score">0 / 10</h3>
+                    <p>Score</p>
+                </div>
+
+                <div>
+                    <h3 id="correctAnswers">0</h3>
+                    <p>Correct</p>
+                </div>
+
+                <div>
+                    <h3 id="incorrectAnswers">0</h3>
+                    <p>Incorrect</p>
+                </div>
+
+                <div>
+                    <h3 id="percentage">0%</h3>
+                    <p>Percentage</p>
+                </div>
+
+            </div>
+
+
+            <h2>Question Review</h2>
+
+            <div id="reviewContainer">
+            </div>
+
+
+            <button
+                id="restartBtn"
+                type="button">
+                Restart Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
